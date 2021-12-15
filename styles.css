@@ -1,1 +1,89 @@
 /*Maak hier jouw CSS!*/
+
+.grid-container  {
+    background-color: hsl(33, 100%, 93%);
+    color: hsl(0, 0%, 100%);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px auto 50px 50px 50px 50px 50px;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    grid-template-areas:
+        "A"
+        "B"
+        "C"
+        "D"
+        "E"
+        "."
+        "F"
+}
+
+.item-1, .item-2, .item-3, .item-4, .item-5, .item-6  {
+    background-color: hsl(355, 52%, 48%);
+}
+
+.item-1    {
+    grid-area: A;
+    border: solid 1px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-2    {
+    grid-area: B;
+    border: solid 1px black;
+    padding: 20px 20px 20px 20px;
+}
+
+.item-3    {
+    grid-area: C;
+    border: solid 1px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-4    {
+    grid-area: D;
+    border: solid 1px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-5    {
+    grid-area: E;
+    border: solid 1px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-6    {
+    grid-area: F;
+    border: solid 1px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Desktop*/
+
+@media screen and (min-width: 1200px){
+
+    .grid-container  {
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 50px 174px 100px auto 50px;
+        grid-column-gap: 16px;
+        grid-row-gap: 16px;
+        grid-template-areas:
+        "A C C"
+        "B C C"
+        "B E D"
+        "B E ."
+        "F F F"
+
+    }
+
+}
